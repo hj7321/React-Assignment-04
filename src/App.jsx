@@ -1,7 +1,5 @@
+import Router from "./shared/Router";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Detail from "./pages/Detail";
 
 const App = () => {
   /**
@@ -20,12 +18,7 @@ const App = () => {
   return (
     <>
       <div>App 컴포넌트입니다.</div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/detail:id" element={<Detail />} />
-        </Routes>
-      </BrowserRouter>
+      <Router />
     </>
   );
 };
